@@ -1,0 +1,19 @@
+
+.content{
+  padding: 16px;
+}
+mat-card{
+  width: 22rem;
+}
+.mat-card>:last-child{
+  margin-bottom: 0;
+  display: flex;
+}
+.mat-card-image {
+  margin: 0px;
+}
+mat-card-actions{
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-between;
+}

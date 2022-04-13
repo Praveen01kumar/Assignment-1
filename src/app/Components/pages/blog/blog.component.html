@@ -1,0 +1,29 @@
+<router-outlet></router-outlet>
+
+<div class="content">
+  <div fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div fxLayout="25%" *ngFor="let num of [1,2,3,4,5,6,7,8]">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Articale {{num}}</mat-card-title>
+          <mat-card-subtitle>Blog post {{num}}</mat-card-subtitle>
+        </mat-card-header>
+        <img matCardImage src="../../../../assets/img2- blog page.jpg">
+        <mat-card-content>
+          Text content Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptatem rerum voluptate,
+          necessitatibus tempora
+        </mat-card-content>
+        <mat-card-actions align="start">
+          <button mat-stroked-button color="primary" routerLink="read-more">Read More</button>
+          <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+            <mat-icon>favorite</mat-icon>
+          </button>
+          <button mat-icon-button color="primary" aria-label="Example icon button with a open in new tab icon">
+            <mat-icon> directions </mat-icon>
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>
+

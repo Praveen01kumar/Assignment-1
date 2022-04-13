@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+    <a routerLink="home">Home</a>
+    <a routerLink="blog" *ngIf="signedin">Blog</a>
+    <a routerLink="contact-us" *ngIf="signedin">Contact us</a>
+    <span class="example-spacer"></span>
+    <button mat-button [matMenuTriggerFor]="beforeMenu">
+        <mat-icon>account_box</mat-icon>
+    </button>
+    <mat-menu #beforeMenu="matMenu" xPosition="before">
+        <div *ngIf="logout">
+            <button mat-menu-item (click)="dialogSignup()"> <mat-icon>home</mat-icon> Sign Up</button>
+            <button mat-menu-item (click)="dialogSignin()"> <mat-icon>home</mat-icon> Sign In</button>
+        </div>
+        <div *ngIf="signedin">
+            <button mat-menu-item routerLink="log-in" (click)="LogOut()"> <mat-icon> logout</mat-icon> Login Out</button>
+            <button mat-menu-item (click)="dialogForgotPassword()"><mat-icon> info</mat-icon>Forgot Password</button>
+            <button mat-menu-item (click)="dialosignup()"><mat-icon> update</mat-icon> Update</button>
+            <button mat-menu-item routerLink="delete-user"><mat-icon> delete</mat-icon>Delete</button>
+        </div>
+    </mat-menu>
+
+</mat-toolbar>

@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="container-item">
+            <div class="custom-content">
+                <form [formGroup]="ContactUsForm" (ngSubmit)="onSubmit()">
+                    <h1>Let's Communicate </h1>
+                    <div class="name form-group">
+                        <mat-form-field appearance="outline">
+                            <mat-label for="contactus">Email address</mat-label>
+                            <input id="contactus" type="email" formControlName="email" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"
+                                placeholder="Enter your Email">
+                            <mat-icon matPrefix>email</mat-icon>
+                            <mat-hint style="color: red;" *ngIf="submitted && f['email'].errors"
+                                class="invalid-feedback">
+                                <div *ngIf="f['email'].errors['required']">Email is required</div>
+                                <div *ngIf="f['email'].errors['email']">Email is invalid</div>
+                            </mat-hint>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label for="message">Message</mat-label>
+                            <textarea id="message" type="text" formControlName="textarea" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f['textarea'].errors }"
+                                placeholder="Enter your Text Message"></textarea>
+
+                            <mat-hint style="color: red;" *ngIf="submitted && f['textarea'].errors"
+                                class="invalid-feedback">
+                                <div *ngIf="f['textarea'].errors['required']">Message is required</div>
+                                <div *ngIf="f['textarea'].errors['minlength']">Message must be at least 100 characters
+                                </div>
+                                <div *ngIf="f['textarea'].errors['maxlength']"> Message must not exceed 250 characters
+                                </div>
+                            </mat-hint>
+                        </mat-form-field>
+                    <button class="global-button" type="submit">Send Message</button>
+
+                    </div>
+                    <small class="global-question">Have not an account? <a routerLink="sign-up" style="color: red;">Sign
+                            up</a></small>
+                </form>
+        </div>
+    </div>
+
+    <p>
+        <mat-form-field appearance="standard">
+          <mat-label>Standard form field</mat-label>
+          <input matInput placeholder="Placeholder">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+      </p>
+      
+</div>
+
+
+ 

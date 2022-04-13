@@ -1,0 +1,53 @@
+<div class="container" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="10px" fxLayoutGap.xs="5">
+    <div class="item item-1" id="item" fxFlex="65%" fxLayout fxLayout.xs="row" fxFlexOffset.xs="0" fxFlex.xs="100%">
+      <div class="left-item">
+        <div class="global-meta">
+          <time>2 years ago</time> by
+          <a href="#">Megan Anderson</a> &amp; <a href="#">Victoria West</a>
+          <span class="global-reading"> — 3 min read</span>
+        </div>
+        <h2 class="item-title">Now we’re getting some where</h2>
+        <div class="item-excerpt">
+          <div class="item-excerpt1"> Quae quo sunt excelsiores, eo dant clariora indicia naturae. Sed haec quidem
+            liberius ab eo dicuntur et</div>
+          <div class="item-excerpt2">saepius.
+            Et ille ridens video, inquit, quid agas tum ille timide vel potius verecunde.</div>
+        </div>
+        <div class="global-tags">
+          <a href="#" class="global-tags-hash-sign">#story</a>
+          <a href="#" class="global-tags-hash-sign">#art</a>
+          <a href="#" class="global-tags-hash-sign">#creative</a>
+        </div>
+        <mat-accordion>
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Show More Options
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-card-actions align="start">
+              <button mat-raised-button color="primary" routerLink="/blog" >Go For More</button>
+              <button mat-raised-button color="primary">Like</button>
+              <button mat-raised-button color="warn">Share</button>
+            </mat-card-actions>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+    </div>
+    <div class="item item-2" fxFlex="35%" fxFlex.xs="100%" fxLayoutAlign="center">
+      <div class="item-container global-color">
+        <img src="../../../../assets/img1.jpeg" alt="img">
+      </div>
+    </div>
+  </div>
+
+ 
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Standard form field</mat-label>
+      <input matInput placeholder="Placeholder">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+  </p>

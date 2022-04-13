@@ -1,0 +1,24 @@
+<div class="container" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="10px" fxLayoutGap.xs="5">
+  <div class="item item-1" id="item" fxFlex="65%" fxLayout fxLayout.xs="row" fxFlexOffset.xs="0" fxFlex.xs="100%">
+    <div class="left-item">
+      <h2 class="item-title" *ngFor="let num of [1]">Articlte {{num}} </h2>
+
+      <div class="item-excerpt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime illum
+        voluptatum id beatae eius laborum temporibus, reprehenderit omnis facilis earum at error deserunt maiores, illo
+        eveniet voluptate consequuntur quas! Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+        necessitatibus tempore est voluptas, aspernatur magni ex ipsam modi id expedita, ab fuga repellendus eveniet ea?
+        Impedit ea adipisci tenetur neque.
+      </div>
+      <mat-card-actions>
+        <button mat-raised-button color="accent">Like</button>
+        <button mat-raised-button color="warn">Share</button>
+      </mat-card-actions>
+    </div>
+  </div>
+
+  <div class="item item-2" fxFlex="35%" fxFlex.xs="100%" fxLayoutAlign="center">
+    <div class="item-container global-color">
+      <img src="../../../../../assets/img2- blog page.jpg" alt="img">
+    </div>
+  </div>
+</div>

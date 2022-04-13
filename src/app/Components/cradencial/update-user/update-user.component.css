@@ -1,0 +1,63 @@
+.container{
+    display: flex;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    box-shadow: 10px 10px 5px -5px rgba(0,0,0,0.75);
+    border: 1px solid rgb(135, 131, 131);
+    border-radius: 10px;
+}
+.container .container-item{
+    padding: 2rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+}
+.custom-content form {
+    width: 100%;
+}
+.custom-content h1{
+    text-align: center;
+    font-size: 30px;
+    margin: 0 0 0 -2px;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #141c3a;
+    letter-spacing: -.5px;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+.global-button {
+    width: 100%;
+    padding: 20px;
+    line-height: 1; 
+    margin-bottom: 10px;
+}
+.global-button:hover{
+    background-color: #0cc288;
+    color: white;
+}
+.mail_field{
+    display: flex;
+    flex-direction: column;
+}
+mat-icon {
+    margin-right: 10px;
+}
+.name{
+    display: flex;
+    flex-wrap: wrap;
+}
+.firstname{
+    margin-right: 10px;
+}
+.error{
+    border: 1px solid rgb(200, 26, 26);
+    background-color: rgb(192, 128, 128); 
+    height: auto; 
+    width: auto; 
+    border-radius: 10px; 
+    padding: 10px;
+}

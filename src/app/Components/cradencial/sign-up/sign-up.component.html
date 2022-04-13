@@ -1,0 +1,96 @@
+<div class="container">
+    <div class="container-item">
+        <div class="custom-content">
+            <form [formGroup]="Signupform" (ngSubmit)="onSubmit()">
+                <h1>Sign Up</h1>
+                <div class="name form-group">
+                    <!-- first name  -->
+                    <mat-form-field appearance="outline" class="firstname">
+                        <mat-label for="first name">First Name</mat-label>
+                        <input matInput id="signup" type="text" formControlName="firstname" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f['firstname'].errors }"
+                            placeholder="Enter your First Name">
+                        <mat-icon matPrefix>person_add</mat-icon>
+                        <mat-hint style="color: red;" *ngIf="submitted && f['firstname'].errors"
+                            class="invalid-feedback">
+                            <div *ngIf="f['firstname'].errors['required']">First name is required</div>
+                            <div *ngIf="f['firstname'].errors['minlength']">Must be at 6 characters
+                            </div>
+                            <div *ngIf="f['firstname'].errors['maxlength']"> Not exceed 20 characters
+                            </div>
+                            <div *ngIf="f['firstname'].errors['cannotContainSpace']"> Can not cantain space
+                            </div>
+                        </mat-hint>
+                    </mat-form-field>
+                    <!-- last name  -->
+                    <mat-form-field appearance="outline" class="lastname">
+                        <mat-label for="last name">Last name</mat-label>
+                        <input matInput id="signup" type="text" formControlName="lastname" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f['lastname'].errors}"
+                            placeholder="Enter your Last Name">
+                        <mat-icon matPrefix>person_add</mat-icon>
+                        <mat-hint style="color: red;" *ngIf="submitted && f['lastname'].errors"
+                            class="invalid-feedback">
+                            <div *ngIf="f['lastname'].errors['required']">Last name is required</div>
+                            <div *ngIf="f['lastname'].errors['minlength']">Must be at 6 characters</div>
+                            <div *ngIf="f['lastname'].errors['maxlength']"> Not exceed 20 characters
+                            </div>
+                            <div *ngIf="f['lastname'].errors['cannotContainSpace']"> Can not cantain space
+                            </div>
+                        </mat-hint>
+                    </mat-form-field>
+                </div>
+                <div class="mail_field form-group">
+                    <!-- email  -->
+                    <mat-form-field appearance="outline">
+                        <mat-label for="signup">Email address</mat-label>
+                        <input matInput id="signup" type="email" formControlName="email" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" placeholder="Enter your Email">
+                        <mat-icon matPrefix>email</mat-icon>
+                        <mat-hint style="color: red;" *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                            <div *ngIf="f['email'].errors['required']">Email is required</div>
+                            <div *ngIf="f['email'].errors['email']">Email is invalid</div>
+                        </mat-hint>
+                    </mat-form-field>
+                    <!-- password  -->
+                    <mat-form-field appearance="outline">
+                        <mat-label for="password">Password</mat-label>
+                        <input matInput id="password" type="password" formControlName="password" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f['password'].errors }"
+                            placeholder="Enter your Password">
+                        <mat-icon matPrefix>lock</mat-icon>
+                        <mat-hint style="color: red;" *ngIf="submitted && f['password'].errors"
+                         class="invalid-feedback">
+                            <div *ngIf="f['password'].errors['required']">Password is required</div>
+                            <div *ngIf="f['password'].errors['minlength']">Must be at 6 characters
+                            </div>
+                            <div *ngIf="f['password'].errors['maxlength']"> Not exceed 20 characters
+                            </div>
+                        </mat-hint>
+                    </mat-form-field>
+                    <!-- confirm password  -->
+                    <mat-form-field appearance="outline">
+                        <mat-label for="confirm-password"> Confirm Password</mat-label>
+                        <input matInput id="confirm-password" type="password" formControlName="confirmPassword"
+                            class="form-control" [ngClass]="{ 'is-invalid': submitted && f['confirmPassword'].errors }"
+                            placeholder="Enter your Confirm Password">
+                        <mat-icon matPrefix>password</mat-icon>
+                        <mat-hint style="color: red;" *ngIf="submitted && f['confirmPassword'].errors"
+                            class="invalid-feedback">
+                            <div *ngIf="f['confirmPassword'].errors['required']"> Confirm Password is required
+                            </div>
+                            <div *ngIf="f['confirmPassword'].errors['mustMatch']"> Confirm Password does not match
+                            </div>
+                        </mat-hint>
+                    </mat-form-field>
+                </div>
+                <!-- button  -->
+                <button mat-raised-button class="global-button" color="primary" type="submit">Sign Up</button>
+                <!-- ulternative button  -->
+                <small class="global-question">Already Have An Account ? <button mat-button color="accent" (click)="signIndialog()"
+                    >Sign In</button></small>
+                <div *ngIf="error" class="error"> {{errorMsgsToAlert}}</div>
+            </form>
+        </div>
+    </div>
+</div>
